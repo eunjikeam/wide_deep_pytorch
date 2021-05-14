@@ -1,0 +1,103 @@
+{
+    "wide_parms": {
+        "wide_cols": [
+            "capital_gain"
+        ],
+        "crossed_cols": [
+            [
+                "gender",
+                "race"
+            ]
+        ]
+    },
+    "deep_parms": {
+        "embed_cols": [
+            [
+                "education",
+                16
+            ],
+            [
+                "relationship",
+                16
+            ]
+        ],
+        "continuous_cols": [
+            "age",
+            "hours_per_week"
+        ],
+        "scale": true
+    },
+    "model_parms": {
+        "target": "income",
+        "batch_size": 512,
+        "lr": 0.01,
+        "num_workers": 4,
+        "n_epochs": 3,
+        "hidden_layers": [
+            128,
+            32
+        ],
+        "dropout": [
+            0.8
+        ],
+        "output_dim": 1,
+        "use_gpu": true,
+        "gpu_ids": [
+            1,
+            2
+        ],
+        "version": "v0002",
+        "model_dir": null,
+        "wide_dim": 133,
+        "embeddings_input": [
+            [
+                "education",
+                16,
+                16
+            ],
+            [
+                "relationship",
+                6,
+                16
+            ]
+        ],
+        "embeddings_encoding_dict": {
+            "education": {
+                "11th": 1,
+                "HS-grad": 2,
+                "Assoc-acdm": 3,
+                "Some-college": 4,
+                "10th": 5,
+                "Prof-school": 6,
+                "7th-8th": 7,
+                "Bachelors": 8,
+                "Masters": 9,
+                "Doctorate": 10,
+                "5th-6th": 11,
+                "Assoc-voc": 12,
+                "9th": 13,
+                "12th": 14,
+                "1st-4th": 15,
+                "Preschool": 16
+            },
+            "relationship": {
+                "Own-child": 1,
+                "Husband": 2,
+                "Not-in-family": 3,
+                "Unmarried": 4,
+                "Wife": 5,
+                "Other-relative": 6
+            }
+        },
+        "deep_column_idx": {
+            "education": 0,
+            "relationship": 1,
+            "age": 2,
+            "hours_per_week": 3
+        },
+        "continuous_cols": [
+            "age",
+            "hours_per_week"
+        ]
+    }
+}
